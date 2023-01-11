@@ -1,1 +1,5 @@
-<p>post-item works!</p>
+<h1>{{ post.title }}</h1>
+<p>votes: {{ post.votes }}</p>
+<button (click)="Upvote(post)">Upvote</button>
+<button (click)="Downvote(post)">Downvote</button>
+<button (click)="hide(post)">Hide</button>

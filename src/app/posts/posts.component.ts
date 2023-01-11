@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../models/Post';
+import { PostService } from '../services/post.service';
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -8,21 +9,11 @@ import { Post } from '../models/Post';
 export class PostsComponent {
   title: string = 'Posts';
   posts: Post[] = [];
-  constructor() {}
+  constructor(private postservice: PostService) {}
   ngOnInit(): void {
-    this.posts = [
-      {
-        id: 1,
-        title: 'My first post',
-        body: 'I am not okey',
-        votes: 2,
-      },
-      {
-        id: 2,
-        title: 'My second post',
-        body: 'I am okey',
-        votes: 6,
-      },
-    ];
+    this.posts = this.postservice.getposts();
+  }
+  hidePost(post: Post): void {
+    this.posts = this.posts.filter((p) => p.id !== post.id);
   }
 }

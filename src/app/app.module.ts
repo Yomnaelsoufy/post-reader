@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { PostItemComponent } from './post-item/post-item.component';
+import { HistoryComponent } from './history/history.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     RecipeComponent,
-    PostItemComponent
+    PostItemComponent,
+    HistoryComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
