@@ -8,6 +8,7 @@ import { RecipeComponent } from './recipe/recipe.component';
 import { PostItemComponent } from './post-item/post-item.component';
 import { HistoryComponent } from './history/history.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
