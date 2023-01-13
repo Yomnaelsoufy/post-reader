@@ -11,7 +11,7 @@ export class PostItemComponent implements OnInit {
   @Output() hidePost: EventEmitter<Post> = new EventEmitter();
   constructor() {
     this.post = {
-      id: 1,
+      userId: 1,
       title: 'post',
       body: 'body',
       votes: 3,
