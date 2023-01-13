@@ -10,7 +10,8 @@ import { HistoryComponent } from './history/history.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms';
+import { CreatePostComponent } from './create-post/create-post.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +20,15 @@ import { HttpClientModule } from '@angular/common/http';
     PostItemComponent,
     HistoryComponent,
     NavbarComponent,
+    CreatePostComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -23,4 +23,9 @@ export class PostsComponent {
   hidePost(post: Post): void {
     this.posts = this.posts.filter((p) => p.userId !== post.userId);
   }
+  addPost(post: Post) {
+    // this.posts.push(post);
+    this.posts.unshift(post);
+    alert('post added!');
+  }
 }
